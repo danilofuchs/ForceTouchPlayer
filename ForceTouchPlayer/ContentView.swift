@@ -9,9 +9,41 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var timerEnabled = false
+    var timerPublisher = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
+    
     var body: some View {
-        Text("Hello, World!")
-            .frame(maxWidth: .infinity, maxHeight: .infinity)
+        HStack {
+            Spacer()
+            VStack {
+                Spacer()
+                Button(action: self.toggleTimer) {
+                    Text(timerEnabled ? "Pause" : "Play")
+                }
+                .padding()
+                Spacer()
+            }
+            Spacer()
+        }.onReceive(timerPublisher) {
+            time in
+            self.playIfEnabled()
+        }
+    }
+    
+    func toggleTimer() {
+        self.timerEnabled = !self.timerEnabled;
+    }
+    
+     func playIfEnabled() {
+        if (self.timerEnabled) {
+            self.playTick()
+        }
+    }
+
+    func playTick() {
+        NSHapticFeedbackManager.defaultPerformer.perform(
+            NSHapticFeedbackManager.FeedbackPattern.generic,
+            performanceTime: NSHapticFeedbackManager.PerformanceTime.now)
     }
 }
 
