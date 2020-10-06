@@ -8,9 +8,22 @@
 
 import SwiftUI
 
+let timerClockHz = 1000.0
+let timerInterval = 1.0 / timerClockHz
+
+let defaultToneHz = 1.0
+
+//let NOTE_A4 = 440.0
+//
+//let song = [[NOTE_C3, 1], [NOTE_C3, ]]
+
 struct ContentView: View {
+    
     @State private var timerEnabled = false
-    var timerPublisher = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
+    var timer = Timer.publish(every: timerInterval, tolerance: timerInterval, on: .main, in: .common).autoconnect()
+    
+    @State private var lastPulseTime: Date?
+    @State private var skippedTicksCount = 0
     
     var body: some View {
         HStack {
@@ -24,20 +37,33 @@ struct ContentView: View {
                 Spacer()
             }
             Spacer()
-        }.onReceive(timerPublisher) {
+        }.onReceive(timer) {
             time in
-            self.playIfEnabled()
+            self.playIfEnabled(time: time)
         }
     }
     
     func toggleTimer() {
-        self.timerEnabled = !self.timerEnabled;
+        self.timerEnabled = !self.timerEnabled
     }
     
-     func playIfEnabled() {
+    func playIfEnabled(time: Date) {
         if (self.timerEnabled) {
-            self.playTick()
+            self.playTone(time: time)
         }
+    }
+    
+    func playTone(time: Date) {
+        let clockTicksPerToneTick = Int(timerClockHz / defaultToneHz)
+        let clockTicksToSkip = clockTicksPerToneTick - 1
+        
+        if (self.skippedTicksCount < clockTicksToSkip) {
+            self.skippedTicksCount += 1
+            return
+        }
+        
+        self.playTick()
+        self.skippedTicksCount = 0
     }
 
     func playTick() {
