@@ -8,8 +8,9 @@
 
 import SwiftUI
 
-let timerClockHz = 10000.0
+let timerClockHz = 1000.0
 let timerInterval = 1.0 / timerClockHz
+let fractionalPauseBetweenNotes = 32
 
 struct Note {
     var frequency: Double
@@ -27,19 +28,22 @@ struct ContentView: View {
     @State private var currentNoteEndTime: Date?
     
     @State private var tempo = 144.0
+    @State private var song: [Note]?
     
     var body: some View {
-        HStack {
+        let tempoStr = String(format: "%.1f", self.tempo);
+        let noteStr = String(format: "%.1f", self.currentNote?.frequency ?? 0);
+        return HStack {
             Spacer()
             VStack {
                 Spacer()
                 Button(action: self.toggleTimer) {
-                    Text(timerEnabled ? "Pause" : "Play")
+                    Text(timerEnabled ? "Stop" : "Play")
                 }
                 .padding()
-                Text("Tempo: \(tempo)")
+                Text("Tempo: \(tempoStr)")
                 if (currentNote != nil) {
-                    Text("Note: \(currentNote?.frequency ?? 0)")
+                    Text("Note: \(noteStr)")
                 }
                 Spacer()
             }
@@ -71,35 +75,45 @@ struct ContentView: View {
     
     
     func startPlayingSong() {
-        print("starting song")
         self.currentNoteIndex = 0;
         self.startPlayingNote()
     }
     
     func startPlayingNextNote() {
-        print("starting next note")
         self.currentNoteIndex += 1;
         self.startPlayingNote()
     }
     
     func startPlayingNote() {
         guard let note = self.loadNote(index: self.currentNoteIndex) else {
-            print("End of song")
             self.timerEnabled = false
             return
         }
-        print("loaded note")
         self.playNote(note)
     }
     
+    func loadSong() -> [Note] {
+        guard let song = self.song else {
+            let pauseNote = Note(frequency: 0, fractionOfBaseDuration: fractionalPauseBetweenNotes)
+            
+            let songWithPauses = twinkleTwinkleLittleStar.map {
+                Note(frequency: $0[0], fractionOfBaseDuration: Int($0[1]))
+            }.flatMap({ [$0, pauseNote] })
+            
+            self.song = songWithPauses
+            
+            return songWithPauses
+        }
+        return song;
+    }
+    
     func loadNote(index: Int) -> Note? {
+        let song = self.loadSong()
         if (index >= song.endIndex) {
             return nil
         }
         
-        let entry = song[index]
-        let note = Note(frequency: entry[0], fractionOfBaseDuration: Int(entry[1]))
-        return note
+        return song[index]
     }
     
     func playNote(_ note: Note) {
@@ -109,23 +123,19 @@ struct ContentView: View {
         
         let noteDuration = baseDuration / Double(note.fractionOfBaseDuration)
         
-        print("noteDuration: \(noteDuration)")
         self.skippedTicksCount = 0
         
         self.currentNote = note;
         let currentNoteEndTime = Date().addingTimeInterval(noteDuration / 1000.0)
         self.currentNoteEndTime = currentNoteEndTime
-        
-        let formatter = DateFormatter()
-        formatter.dateFormat = "yyyy-MM-dd HH:mm:ss.SSS"
-
-        print("currentNoteEndTime \(formatter.string(from: currentNoteEndTime))")
     }
     
     func playTone(frequency: Double) {
+        if (frequency == 0) {
+            return;
+        }
         let clockTicksPerToneTick = Int(timerClockHz / frequency)
         let clockTicksToSkip = clockTicksPerToneTick - 1
-        //print("clockTicksToSkip: \(clockTicksToSkip), \(self.skippedTicksCount)")
         
         if (self.skippedTicksCount < clockTicksToSkip) {
             self.skippedTicksCount += 1
@@ -214,12 +224,52 @@ let NOTE_AS5 = 932.0
 let NOTE_B5  = 988.0
 let REST = 0.0
 
-let song = [
+let twinkleTwinkleLittleStar = [
     [NOTE_D1, 4],
     [NOTE_D1, 4],
-    [NOTE_G1, 4],
-    [NOTE_G1, 4],
     [NOTE_A1, 4],
     [NOTE_A1, 4],
-    [NOTE_G1, 2]
+    [NOTE_B1, 4],
+    [NOTE_B1, 4],
+    [NOTE_A1, 2],
+    
+    [NOTE_G1, 4],
+    [NOTE_G1, 4],
+    [NOTE_F1, 4],
+    [NOTE_F1, 4],
+    [NOTE_E1, 4],
+    [NOTE_E1, 4],
+    [NOTE_D1, 2],
+    
+    [NOTE_A1, 4],
+    [NOTE_A1, 4],
+    [NOTE_G1, 4],
+    [NOTE_G1, 4],
+    [NOTE_F1, 4],
+    [NOTE_F1, 4],
+    [NOTE_E1, 2],
+    
+    [NOTE_A1, 4],
+    [NOTE_A1, 4],
+    [NOTE_G1, 4],
+    [NOTE_G1, 4],
+    [NOTE_F1, 4],
+    [NOTE_F1, 4],
+    [NOTE_E1, 2],
+    
+    [NOTE_D1, 4],
+    [NOTE_D1, 4],
+    [NOTE_A1, 4],
+    [NOTE_A1, 4],
+    [NOTE_B1, 4],
+    [NOTE_B1, 4],
+    [NOTE_A1, 2],
+    
+    [NOTE_G1, 4],
+    [NOTE_G1, 4],
+    [NOTE_F1, 4],
+    [NOTE_F1, 4],
+    [NOTE_E1, 4],
+    [NOTE_E1, 4],
+    [NOTE_D1, 2],
 ]
