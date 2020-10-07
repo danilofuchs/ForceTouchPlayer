@@ -1,11 +1,3 @@
-//
-//  ContentView.swift
-//  ForceTouchPlayer
-//
-//  Created by Danilo Campana Fuchs on 06/10/20.
-//  Copyright © 2020 Danilo Campana Fuchs. All rights reserved.
-//
-
 import SwiftUI
 
 let timerClockHz = 1000.0

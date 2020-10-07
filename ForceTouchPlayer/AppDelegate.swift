@@ -1,11 +1,3 @@
-//
-//  AppDelegate.swift
-//  ForceTouchPlayer
-//
-//  Created by Danilo Campana Fuchs on 06/10/20.
-//  Copyright © 2020 Danilo Campana Fuchs. All rights reserved.
-//
-
 import Cocoa
 import SwiftUI
 
