@@ -28,6 +28,7 @@ struct ContentView: View {
 
         return HStack {
             Spacer()
+                .frame(width: 64.0)
             VStack {
                 Spacer()
                 Picker(selection: $currentSongIndex.onChange(handlePickerChange), label: Text("Song:").frame(width: 130, alignment: .leading)) {
@@ -47,8 +48,9 @@ struct ContentView: View {
                 Spacer()
             }
             Spacer()
+                .frame(width: 64.0)
         }
-        .frame(minWidth: 480, minHeight: 300)
+        .frame(minWidth: 480, maxWidth: 600, minHeight: 300, maxHeight: 400)
         .onReceive(timer) {
             time in
             self.playTick()
@@ -114,8 +116,6 @@ struct ContentView: View {
         let baseDuration = (60000.0) / tempo
         
         let noteDuration = baseDuration * note.value
-        
-        print(note.value, noteDuration)
         
         self.skippedTicksCount = 0
         self.currentNote = note;

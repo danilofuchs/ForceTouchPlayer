@@ -21,7 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		311A7A96252D08620072A16B /* ForceTouchPlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ForceTouchPlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		311A7A96252D08620072A16B /* Force Touch Player.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Force Touch Player.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		311A7A99252D08620072A16B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		311A7A9B252D08620072A16B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		311A7A9D252D08660072A16B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -59,7 +59,7 @@
 		311A7A97252D08620072A16B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				311A7A96252D08620072A16B /* ForceTouchPlayer.app */,
+				311A7A96252D08620072A16B /* Force Touch Player.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -117,7 +117,7 @@
 			);
 			name = ForceTouchPlayer;
 			productName = ForceTouchPlayer;
-			productReference = 311A7A96252D08620072A16B /* ForceTouchPlayer.app */;
+			productReference = 311A7A96252D08620072A16B /* Force Touch Player.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -325,7 +325,7 @@
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				PRODUCT_BUNDLE_IDENTIFIER = danilofuchs.ForceTouchPlayer;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Force Touch Player";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -346,7 +346,7 @@
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				PRODUCT_BUNDLE_IDENTIFIER = danilofuchs.ForceTouchPlayer;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Force Touch Player";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
