@@ -5,9 +5,9 @@ let timerInterval = 1.0 / timerClockHz
 
 struct ContentView: View {
     
-    var songsList: [Song]
+    let songsList: [Song]
     
-    private var timer = Timer.publish(every: timerInterval, tolerance: timerInterval, on: .main, in: .common).autoconnect()
+    private let timer = Timer.publish(every: timerInterval, tolerance: timerInterval, on: .main, in: .common).autoconnect()
     
     @State private var timerEnabled = false
     @State private var skippedTicksCount = 0

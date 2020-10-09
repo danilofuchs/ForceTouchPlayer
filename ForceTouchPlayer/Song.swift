@@ -1,12 +1,12 @@
 import Foundation
 
 struct Song {
-    var name: String
+    let name: String
     
-    var rawNotes: [RawNote]
+    let rawNotes: [RawNote]
     
     /// Padding note added between each note in a song
-    var padding: Note? = Note(frequency: 0, fractionOfBaseDuration: 32)
+    let padding: Note? = Note(frequency: 0, fractionOfBaseDuration: 32)
     
     var notes: [Note] {
         
@@ -26,8 +26,8 @@ struct Song {
 }
 
 struct Note {
-    var frequency: Double
-    var fractionOfBaseDuration: Double
+    let frequency: Double
+    let fractionOfBaseDuration: Double
 }
 
 /// Notes of the moledy followed by the duration.
