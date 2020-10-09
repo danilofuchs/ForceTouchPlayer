@@ -1,6 +1,6 @@
 import Foundation
 
-struct Song: Equatable {
+struct Song {
     var name: String
     
     var rawNotes: [RawNote]
@@ -22,10 +22,6 @@ struct Song: Equatable {
         })
         
         return paddedNotes
-    }
-    
-    static func == (lhs: Song, rhs: Song) -> Bool {
-        return lhs.name == rhs.name
     }
 }
 

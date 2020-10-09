@@ -50,7 +50,7 @@ struct ContentView: View {
             Spacer()
         }.onReceive(timer) {
             time in
-            self.playIfEnabled()
+            self.playTick()
         }
     }
     
@@ -58,27 +58,13 @@ struct ContentView: View {
         if (self.timerEnabled) {
             self.stop()
         } else {
-            self.startPlayingSong()
+            self.start()
         }
     }
     
-    func playIfEnabled() {
-        guard timerEnabled else { return }
-        guard let currentNote = self.currentNote else { return }
-        guard let currentNoteEndTime = self.currentNoteEndTime else { return }
-        
-        if (Date() > currentNoteEndTime) {
-            self.startPlayingNextNote()
-        }
-        
-        self.playTone(frequency: currentNote.frequency)
-    }
-    
-    
-    func startPlayingSong() {
+    func start() {
         self.timerEnabled = true
-        self.currentNoteIndex = 0
-        self.startPlayingNote()
+        self.enqueueInitialNote()
     }
     
     func stop() {
@@ -89,21 +75,45 @@ struct ContentView: View {
         self.skippedTicksCount = 0
     }
     
-    func startPlayingNextNote() {
-        self.currentNoteIndex += 1;
-        self.startPlayingNote()
+    func playTick() {
+        guard timerEnabled else { return }
+        guard let currentNote = self.currentNote else { return }
+        guard let currentNoteEndTime = self.currentNoteEndTime else { return }
+        
+        if (Date() > currentNoteEndTime) {
+            self.enqueueNextNote()
+        }
+        
+        self.playTickOfTone(frequency: currentNote.frequency)
     }
     
-    func startPlayingNote() {
+    func enqueueInitialNote() {
+        self.currentNoteIndex = 0
+        self.enqueueNote()
+    }
+    
+    func enqueueNextNote() {
+        self.currentNoteIndex += 1
+        self.enqueueNote()
+    }
+    
+    func enqueueNote() {
         guard let note = self.loadNote(index: self.currentNoteIndex) else {
-            self.timerEnabled = false
+            // End of song
+            self.stop()
             return
         }
-        self.playNote(note)
-    }
-    
-    func loadSong(song: Song) -> Song? {
-        return songsList.first { $0 == song }
+        
+        // Time it takes to play a note with fraction 1
+        // (60s / tempo) * 4 beats
+        let baseDuration = (60000.0 * 4.0) / tempo
+        
+        let noteDuration = baseDuration / Double(note.fractionOfBaseDuration)
+        
+        self.skippedTicksCount = 0
+        self.currentNote = note;
+        let currentNoteEndTime = Date().addingTimeInterval(noteDuration / 1000.0)
+        self.currentNoteEndTime = currentNoteEndTime
     }
     
     func loadNote(index: Int) -> Note? {
@@ -116,21 +126,11 @@ struct ContentView: View {
         return currentSong.notes[index]
     }
     
-    func playNote(_ note: Note) {
-        // Time it takes to play a note with fraction 1
-        // (60s / tempo) * 4 beats
-        let baseDuration = (60000.0 * 4.0) / tempo
-        
-        let noteDuration = baseDuration / Double(note.fractionOfBaseDuration)
-        
-        self.skippedTicksCount = 0
-        
-        self.currentNote = note;
-        let currentNoteEndTime = Date().addingTimeInterval(noteDuration / 1000.0)
-        self.currentNoteEndTime = currentNoteEndTime
-    }
-    
-    func playTone(frequency: Double) {
+    /// Software PWM
+    /// Only performs haptic feedback in fractions of the timer frequency
+    /// Example: If timer has frequency of 1000 Hz and we want to play at 100Hz,
+    /// we need to skip 9 clock ticks. This way, we play once every 10 ticks (1000/10 = 100)
+    func playTickOfTone(frequency: Double) {
         if (frequency == 0) {
             return;
         }
@@ -142,11 +142,11 @@ struct ContentView: View {
             return
         }
         
-        self.playTick()
+        self.performHapticFeedback()
         self.skippedTicksCount = 0
     }
     
-    func playTick() {
+    func performHapticFeedback() {
         NSHapticFeedbackManager.defaultPerformer.perform(
             NSHapticFeedbackManager.FeedbackPattern.generic,
             performanceTime: NSHapticFeedbackManager.PerformanceTime.now)
