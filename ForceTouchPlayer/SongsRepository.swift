@@ -2,7 +2,8 @@ import Foundation
 
 struct SongsRepository {
     private var songs: [Song] = [
-        twinkleTwinkleLittleStar
+        twinkleTwinkleLittleStar,
+        tetrisThemeA
     ]
     
     func listSongs() -> [Song] {

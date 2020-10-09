@@ -51,6 +51,7 @@ Well, not really, but we can make it sound like one
 ## Jukebox
 
 - Twinkle Twinkle Little Star™
+- Tetris Theme A™
 
 (that's it)
 

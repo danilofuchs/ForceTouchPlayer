@@ -1,6 +1,5 @@
 import Foundation
 
-
 let twinkleTwinkleLittleStar = Song(
     name: "Twinkle Twinkle Little Star",
     rawNotes: [

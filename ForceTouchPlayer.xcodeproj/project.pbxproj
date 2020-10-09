@@ -15,6 +15,7 @@
 		31ED484D252FE058002B9BAD /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31ED484C252FE058002B9BAD /* Song.swift */; };
 		31ED484F252FE0DA002B9BAD /* SongsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31ED484E252FE0DA002B9BAD /* SongsRepository.swift */; };
 		31ED4852252FE128002B9BAD /* TwinkleTwinkleLittleStar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31ED4851252FE128002B9BAD /* TwinkleTwinkleLittleStar.swift */; };
+		31ED4854252FFA15002B9BAD /* Tetris.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31ED4853252FFA15002B9BAD /* Tetris.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		31ED484C252FE058002B9BAD /* Song.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Song.swift; sourceTree = "<group>"; };
 		31ED484E252FE0DA002B9BAD /* SongsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongsRepository.swift; sourceTree = "<group>"; };
 		31ED4851252FE128002B9BAD /* TwinkleTwinkleLittleStar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwinkleTwinkleLittleStar.swift; sourceTree = "<group>"; };
+		31ED4853252FFA15002B9BAD /* Tetris.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tetris.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +88,7 @@
 		31ED4850252FE116002B9BAD /* Songs */ = {
 			isa = PBXGroup;
 			children = (
+				31ED4853252FFA15002B9BAD /* Tetris.swift */,
 				31ED4851252FE128002B9BAD /* TwinkleTwinkleLittleStar.swift */,
 			);
 			path = Songs;
@@ -164,6 +167,7 @@
 			files = (
 				31ED484D252FE058002B9BAD /* Song.swift in Sources */,
 				311A7A9C252D08620072A16B /* ContentView.swift in Sources */,
+				31ED4854252FFA15002B9BAD /* Tetris.swift in Sources */,
 				31ED484F252FE0DA002B9BAD /* SongsRepository.swift in Sources */,
 				31ED4852252FE128002B9BAD /* TwinkleTwinkleLittleStar.swift in Sources */,
 				311A7A9A252D08620072A16B /* AppDelegate.swift in Sources */,
