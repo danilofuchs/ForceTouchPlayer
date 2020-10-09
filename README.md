@@ -16,7 +16,7 @@ Play your favorite 8-bit tunes _in_ the trackpad, _with_ the trackpad, _on_ the 
 - Run the app
 - Select a tune
 - Click _Play_
-- Don't ever take your finger off the trackpad!
+- **Don't ever take your finger off the trackpad!**
 - Get your ears close to the trackpad (it will not bite you)
 - Sing the melody mentally, it may help
 
@@ -52,6 +52,7 @@ Well, not really, but we can make it sound like one
 
 - Twinkle Twinkle Little Star™
 - Tetris Theme A™
+- Happy Birthday to You™
 
 (that's it)
 
