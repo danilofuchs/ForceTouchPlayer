@@ -59,6 +59,7 @@ struct ContentView: View {
     
     func handlePickerChange(_ index: Int) {
         self.tempo = songsList[currentSongIndex].defaultTempo
+        self.stop()
     }
     
     func toggleTimer() {
