@@ -41,6 +41,7 @@ struct ContentView: View {
                     Slider(value: $tempo, in: 40...200, step: 4)
                 }
                 Spacer()
+                Text("Don't take your finger off of the trackpad!")
                 Button(action: self.toggleTimer) {
                     Text(timerEnabled ? "Stop" : "Play")
                 }
