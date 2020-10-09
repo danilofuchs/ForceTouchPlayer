@@ -25,13 +25,12 @@ struct ContentView: View {
     
     var body: some View {
         let tempoStr = String(format: "%.1f", self.tempo);
-        let noteStr = String(format: "%.1f", self.currentNote?.frequency ?? 0);
         return HStack {
             Spacer()
             VStack {
                 
                 Spacer()
-                Picker(selection: $currentSongIndex, label: Text("Song")) {
+                Picker(selection: $currentSongIndex.onChange(handlePickerChange), label: Text("Song")) {
                     ForEach(0 ..< songsList.count, id: \.self) {
                         Text(self.songsList[$0].name).tag($0)
                     }
@@ -43,11 +42,6 @@ struct ContentView: View {
                 .padding()
                 Slider(value: $tempo, in: 40...200, step: 4)
                 Text("Tempo: \(tempoStr) BPM")
-                if (currentNote != nil) {
-                    Text("Note: \(noteStr)Hz")
-                } else {
-                    Text("")
-                }
                 Spacer()
             }
             Spacer()
@@ -55,6 +49,10 @@ struct ContentView: View {
             time in
             self.playTick()
         }
+    }
+    
+    func handlePickerChange(_ index: Int) {
+        self.tempo = songsList[currentSongIndex].defaultTempo
     }
     
     func toggleTimer() {

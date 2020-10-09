@@ -3,10 +3,12 @@ import Foundation
 struct Song {
     let name: String
     
-    let rawNotes: [RawNote]
+    var defaultTempo: Double = 144.0
     
     /// Padding note added between each note in a song
-    let padding: Note? = Note(frequency: 0, value: 1.0/16.0)
+    var padding: Note? = Note(frequency: 0, value: 1.0/16.0)
+    
+    let rawNotes: [RawNote]
     
     var notes: [Note] {
         
