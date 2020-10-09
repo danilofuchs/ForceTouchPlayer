@@ -12,6 +12,9 @@
 		311A7A9E252D08660072A16B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 311A7A9D252D08660072A16B /* Assets.xcassets */; };
 		311A7AA1252D08660072A16B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 311A7AA0252D08660072A16B /* Preview Assets.xcassets */; };
 		311A7AA4252D08660072A16B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 311A7AA2252D08660072A16B /* Main.storyboard */; };
+		31ED484D252FE058002B9BAD /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31ED484C252FE058002B9BAD /* Song.swift */; };
+		31ED484F252FE0DA002B9BAD /* SongsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31ED484E252FE0DA002B9BAD /* SongsRepository.swift */; };
+		31ED4852252FE128002B9BAD /* TwinkleTwinkleLittleStar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31ED4851252FE128002B9BAD /* TwinkleTwinkleLittleStar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +26,9 @@
 		311A7AA3252D08660072A16B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		311A7AA5252D08660072A16B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		311A7AA6252D08660072A16B /* ForceTouchPlayer.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ForceTouchPlayer.entitlements; sourceTree = "<group>"; };
+		31ED484C252FE058002B9BAD /* Song.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Song.swift; sourceTree = "<group>"; };
+		31ED484E252FE0DA002B9BAD /* SongsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongsRepository.swift; sourceTree = "<group>"; };
+		31ED4851252FE128002B9BAD /* TwinkleTwinkleLittleStar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwinkleTwinkleLittleStar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +61,7 @@
 		311A7A98252D08620072A16B /* ForceTouchPlayer */ = {
 			isa = PBXGroup;
 			children = (
+				31ED4850252FE116002B9BAD /* Songs */,
 				311A7A99252D08620072A16B /* AppDelegate.swift */,
 				311A7A9B252D08620072A16B /* ContentView.swift */,
 				311A7A9D252D08660072A16B /* Assets.xcassets */,
@@ -62,6 +69,8 @@
 				311A7AA5252D08660072A16B /* Info.plist */,
 				311A7AA6252D08660072A16B /* ForceTouchPlayer.entitlements */,
 				311A7A9F252D08660072A16B /* Preview Content */,
+				31ED484C252FE058002B9BAD /* Song.swift */,
+				31ED484E252FE0DA002B9BAD /* SongsRepository.swift */,
 			);
 			path = ForceTouchPlayer;
 			sourceTree = "<group>";
@@ -72,6 +81,14 @@
 				311A7AA0252D08660072A16B /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		31ED4850252FE116002B9BAD /* Songs */ = {
+			isa = PBXGroup;
+			children = (
+				31ED4851252FE128002B9BAD /* TwinkleTwinkleLittleStar.swift */,
+			);
+			path = Songs;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -145,7 +162,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				31ED484D252FE058002B9BAD /* Song.swift in Sources */,
 				311A7A9C252D08620072A16B /* ContentView.swift in Sources */,
+				31ED484F252FE0DA002B9BAD /* SongsRepository.swift in Sources */,
+				31ED4852252FE128002B9BAD /* TwinkleTwinkleLittleStar.swift in Sources */,
 				311A7A9A252D08620072A16B /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
