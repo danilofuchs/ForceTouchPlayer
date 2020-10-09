@@ -6,7 +6,7 @@ struct Song {
     var defaultTempo: Double = 144.0
     
     /// Padding note added between each note in a song
-    var padding: Note? = Note(frequency: 0, value: 1.0/16.0)
+    var padding: Note? = Note(frequency: 0, value: 1.0/4.0)
     
     let rawNotes: [RawNote]
     
