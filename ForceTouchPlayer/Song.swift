@@ -32,8 +32,8 @@ struct Note {
     let value: Double
 }
 
-/// Notes of the moledy followed by the duration.
-/// a 4 means a quarter note, 8 an eighteenth , 16 sixteenth, so on
+/// Notes of the moledy followed by the duration in beats.
+/// a 1 means a quarter note, 0.5 an eighteenth , 0.25 sixteenth, so on
 typealias RawNote = (frequency: Double, value: Double)
 
 let NOTE_B0  = 31.0

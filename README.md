@@ -12,7 +12,10 @@ Play your favorite 8-bit tunes _in_ the trackpad, _with_ the trackpad, _on_ the 
 
 ## Wow, such vibration
 
-- Download the binary
+- Download the [binary from latest release](https://github.com/danilofuchs/ForceTouchPlayer/releases)
+- Unzip the file
+- Right click the .app file and `Open`
+- Confirm open of untrusted source (I'm sorry)
 - Run the app
 - Select a tune
 - Click _Play_
@@ -68,6 +71,12 @@ Who knew trackpads had limits? I could only get it to work until around 220Hz (A
 
 ### Adding a new tune
 
-Any flute melody can work, as they only output a single note at a time.
+Any flute melody can work, as they only output a single note at a time. I recommend using parts from https://www.flutetunes.com/
+
+Remember to only use the lower keys (B0 -> B2)
 
 Songs can be adapted from [`arduino-songs`](https://github.com/robsoncouto/arduino-songs). They are already curated and it is pretty much a task of copying and translating C arrays to Swift™
+
+### MIDI support?
+
+That would be nice
