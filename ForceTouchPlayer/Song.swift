@@ -27,11 +27,12 @@ struct Song {
 
 struct Note {
     var frequency: Double
-    var fractionOfBaseDuration: Int
+    var fractionOfBaseDuration: Double
 }
 
-/// Useful for batch handling of songs
-typealias RawNote = (frequency: Double, fractionOfBaseDuration: Int)
+/// Notes of the moledy followed by the duration.
+/// a 4 means a quarter note, 8 an eighteenth , 16 sixteenth, so on
+typealias RawNote = (frequency: Double, fractionOfBaseDuration: Double)
 
 let NOTE_B0  = 31.0
 let NOTE_C1  = 33.0

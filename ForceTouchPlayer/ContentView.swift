@@ -45,6 +45,8 @@ struct ContentView: View {
                 Text("Tempo: \(tempoStr) BPM")
                 if (currentNote != nil) {
                     Text("Note: \(noteStr)Hz")
+                } else {
+                    Text("")
                 }
                 Spacer()
             }
