@@ -41,6 +41,7 @@ struct ContentView: View {
                     Text(timerEnabled ? "Stop" : "Play")
                 }
                 .padding()
+                Slider(value: $tempo, in: 20...200, step: 4)
                 Text("Tempo: \(tempoStr) BPM")
                 if (currentNote != nil) {
                     Text("Note: \(noteStr)Hz")
