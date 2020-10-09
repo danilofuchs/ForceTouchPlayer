@@ -6,12 +6,12 @@ struct Song {
     let rawNotes: [RawNote]
     
     /// Padding note added between each note in a song
-    let padding: Note? = Note(frequency: 0, fractionOfBaseDuration: 32)
+    let padding: Note? = Note(frequency: 0, value: 1.0/16.0)
     
     var notes: [Note] {
         
         let parsedNotes = rawNotes.map {
-            Note(frequency: $0.frequency, fractionOfBaseDuration: $0.fractionOfBaseDuration)
+            Note(frequency: $0.frequency, value: $0.value)
         }
         
         let paddedNotes = parsedNotes.enumerated().flatMap({(index, note) -> [Note] in
@@ -27,12 +27,12 @@ struct Song {
 
 struct Note {
     let frequency: Double
-    let fractionOfBaseDuration: Double
+    let value: Double
 }
 
 /// Notes of the moledy followed by the duration.
 /// a 4 means a quarter note, 8 an eighteenth , 16 sixteenth, so on
-typealias RawNote = (frequency: Double, fractionOfBaseDuration: Double)
+typealias RawNote = (frequency: Double, value: Double)
 
 let NOTE_B0  = 31.0
 let NOTE_C1  = 33.0

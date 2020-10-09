@@ -32,7 +32,7 @@ struct ContentView: View {
                 
                 Spacer()
                 Picker(selection: $currentSongIndex, label: Text("Song")) {
-                    ForEach(0 ..< songsList.count) {
+                    ForEach(0 ..< songsList.count, id: \.self) {
                         Text(self.songsList[$0].name).tag($0)
                     }
                 }
@@ -41,7 +41,7 @@ struct ContentView: View {
                     Text(timerEnabled ? "Stop" : "Play")
                 }
                 .padding()
-                Slider(value: $tempo, in: 20...200, step: 4)
+                Slider(value: $tempo, in: 40...200, step: 4)
                 Text("Tempo: \(tempoStr) BPM")
                 if (currentNote != nil) {
                     Text("Note: \(noteStr)Hz")
@@ -107,11 +107,13 @@ struct ContentView: View {
             return
         }
         
-        // Time it takes to play a note with fraction 1
-        // (60s / tempo) * 4 beats
-        let baseDuration = (60000.0 * 4.0) / tempo
+        // Time it takes to play a note with 4 beats
+        // (1min / tempo (bpm))
+        let baseDuration = (60000.0) / tempo
         
-        let noteDuration = baseDuration / Double(note.fractionOfBaseDuration)
+        let noteDuration = baseDuration * note.value
+        
+        print(note.value, noteDuration)
         
         self.skippedTicksCount = 0
         self.currentNote = note;
