@@ -23,6 +23,8 @@ Play your favorite 8-bit tunes _in_ the trackpad, _with_ the trackpad, _on_ the 
 - Get your ears close to the trackpad (it will not bite you)
 - Sing the melody mentally, it may help
 
+_Needs macOS 10.15 (Catalina) or later_
+
 ## Whoa, Black magic™?
 
 No witchery here.
