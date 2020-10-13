@@ -10,6 +10,8 @@ You see where I'm getting at. Introducing the Force Touch Player™ (not actuall
 
 Play your favorite 8-bit tunes _in_ the trackpad, _with_ the trackpad, _on_ the trackpad. No speaker required!
 
+![Screenshot](./docs/screenshot.png)
+
 ## Wow, such vibration
 
 - Download the [binary from latest release](https://github.com/danilofuchs/ForceTouchPlayer/releases)
@@ -17,13 +19,21 @@ Play your favorite 8-bit tunes _in_ the trackpad, _with_ the trackpad, _on_ the 
 - Right click the .app file and `Open`
 - Confirm open of untrusted source (I'm sorry)
 - Run the app
-- Select a tune
+- Select a tune from the [Jukebox](#jukebox)
 - Click _Play_
 - **Don't ever take your finger off the trackpad!**
 - Get your ears close to the trackpad (it will not bite you)
 - Sing the melody mentally, it may help
 
 _Needs macOS 10.15 (Catalina) or later_
+
+## Jukebox
+
+- Twinkle Twinkle Little Star™
+- Tetris Theme A™
+- Happy Birthday to You™
+
+(that's it)
 
 ## Whoa, Black magic™?
 
@@ -52,14 +62,6 @@ Do you realize what they created? Not only they made a noisy motor, but they als
 You know what this means? They created a _speaker_
 
 Well, not really, but we can make it sound like one
-
-## Jukebox
-
-- Twinkle Twinkle Little Star™
-- Tetris Theme A™
-- Happy Birthday to You™
-
-(that's it)
 
 ## Contributing
 
