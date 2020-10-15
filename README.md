@@ -69,6 +69,12 @@ Are you sure?
 
 This can't be right. Really?
 
+### Your toolkit
+
+You will need Xcode™ 11 running on macOS™ 10.15 (Catalina) or later. This project uses SwiftUI with features introduced in 10.15.
+
+Open the project on Xcode and run using either Debug or Release profile.
+
 ### Is there even a limit?
 
 Who knew trackpads had limits? I could only get it to work until around 220Hz (A3). If you are brave enough, maybe you can find a way to make it less bad™
