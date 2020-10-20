@@ -18,6 +18,7 @@
 		31ED484F252FE0DA002B9BAD /* SongsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31ED484E252FE0DA002B9BAD /* SongsRepository.swift */; };
 		31ED4852252FE128002B9BAD /* TwinkleTwinkleLittleStar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31ED4851252FE128002B9BAD /* TwinkleTwinkleLittleStar.swift */; };
 		31ED4854252FFA15002B9BAD /* Tetris.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31ED4853252FFA15002B9BAD /* Tetris.swift */; };
+		7DDC3568253DC8D000F48DCD /* ImperialMarch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DDC3567253DC8D000F48DCD /* ImperialMarch.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 		31ED484E252FE0DA002B9BAD /* SongsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongsRepository.swift; sourceTree = "<group>"; };
 		31ED4851252FE128002B9BAD /* TwinkleTwinkleLittleStar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwinkleTwinkleLittleStar.swift; sourceTree = "<group>"; };
 		31ED4853252FFA15002B9BAD /* Tetris.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tetris.swift; sourceTree = "<group>"; };
+		7DDC3567253DC8D000F48DCD /* ImperialMarch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImperialMarch.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +98,7 @@
 				31ED4853252FFA15002B9BAD /* Tetris.swift */,
 				31ED4851252FE128002B9BAD /* TwinkleTwinkleLittleStar.swift */,
 				31A156D22530030800777E42 /* HappyBirthday.swift */,
+				7DDC3567253DC8D000F48DCD /* ImperialMarch.swift */,
 			);
 			path = Songs;
 			sourceTree = "<group>";
@@ -127,7 +130,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1160;
-				LastUpgradeCheck = 1160;
+				LastUpgradeCheck = 1200;
 				ORGANIZATIONNAME = "Danilo Campana Fuchs";
 				TargetAttributes = {
 					311A7A95252D08620072A16B = {
@@ -174,6 +177,7 @@
 				31ED484D252FE058002B9BAD /* Song.swift in Sources */,
 				311A7A9C252D08620072A16B /* ContentView.swift in Sources */,
 				31ED4854252FFA15002B9BAD /* Tetris.swift in Sources */,
+				7DDC3568253DC8D000F48DCD /* ImperialMarch.swift in Sources */,
 				31A156D525300B6B00777E42 /* Extensions.swift in Sources */,
 				31ED484F252FE0DA002B9BAD /* SongsRepository.swift in Sources */,
 				31ED4852252FE128002B9BAD /* TwinkleTwinkleLittleStar.swift in Sources */,
