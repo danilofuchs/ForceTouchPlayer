@@ -32,6 +32,7 @@ _Needs macOS 10.15 (Catalina) or later_
 - Twinkle Twinkle Little Star™
 - Tetris Theme A™
 - Happy Birthday to You™
+- The Imperial March™
 
 (that's it)
 
