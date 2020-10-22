@@ -12,6 +12,7 @@
 		311A7A9E252D08660072A16B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 311A7A9D252D08660072A16B /* Assets.xcassets */; };
 		311A7AA1252D08660072A16B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 311A7AA0252D08660072A16B /* Preview Assets.xcassets */; };
 		311A7AA4252D08660072A16B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 311A7AA2252D08660072A16B /* Main.storyboard */; };
+		317A217C2541277B00A96DF2 /* CMajorScale.swift in Sources */ = {isa = PBXBuildFile; fileRef = 317A217B2541277B00A96DF2 /* CMajorScale.swift */; };
 		31A156D32530030800777E42 /* HappyBirthday.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A156D22530030800777E42 /* HappyBirthday.swift */; };
 		31A156D525300B6B00777E42 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A156D425300B6B00777E42 /* Extensions.swift */; };
 		31ED484D252FE058002B9BAD /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31ED484C252FE058002B9BAD /* Song.swift */; };
@@ -31,6 +32,7 @@
 		311A7AA3252D08660072A16B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		311A7AA5252D08660072A16B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		311A7AA6252D08660072A16B /* ForceTouchPlayer.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ForceTouchPlayer.entitlements; sourceTree = "<group>"; };
+		317A217B2541277B00A96DF2 /* CMajorScale.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMajorScale.swift; sourceTree = "<group>"; };
 		31A156D22530030800777E42 /* HappyBirthday.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HappyBirthday.swift; sourceTree = "<group>"; };
 		31A156D425300B6B00777E42 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		31ED484C252FE058002B9BAD /* Song.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Song.swift; sourceTree = "<group>"; };
@@ -102,6 +104,7 @@
 				31A156D22530030800777E42 /* HappyBirthday.swift */,
 				7DDC3567253DC8D000F48DCD /* ImperialMarch.swift */,
 				7D830401253FB48E002466B0 /* HedwigsTheme.swift */,
+				317A217B2541277B00A96DF2 /* CMajorScale.swift */,
 			);
 			path = Songs;
 			sourceTree = "<group>";
@@ -184,6 +187,7 @@
 				7DDC3568253DC8D000F48DCD /* ImperialMarch.swift in Sources */,
 				31A156D525300B6B00777E42 /* Extensions.swift in Sources */,
 				31ED484F252FE0DA002B9BAD /* SongsRepository.swift in Sources */,
+				317A217C2541277B00A96DF2 /* CMajorScale.swift in Sources */,
 				31ED4852252FE128002B9BAD /* TwinkleTwinkleLittleStar.swift in Sources */,
 				31A156D32530030800777E42 /* HappyBirthday.swift in Sources */,
 				311A7A9A252D08620072A16B /* AppDelegate.swift in Sources */,
