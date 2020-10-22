@@ -11,11 +11,13 @@ import Foundation
 
 let hedwigsTheme = Song(
     name: "Hedwig's Theme",
+    defaultTempo: 176.0,
+    padding: Note(frequency: REST, value: 0.25),
     rawNotes: [
         (NOTE_E1, 1),
 
         (NOTE_A1, 1.5),
-        (NOTE_C1, 0.5),
+        (NOTE_C2, 0.5),
         (NOTE_B1, 1),
 
         (NOTE_A1, 2),
@@ -33,8 +35,10 @@ let hedwigsTheme = Song(
         (NOTE_AS1, 1),
 
         (NOTE_E1, 3),
-
+        
+        (REST, 2),
         (NOTE_E1, 1),
+        
         (NOTE_A1, 1.5),
         (NOTE_C2, 0.5),
         (NOTE_B1, 1),
