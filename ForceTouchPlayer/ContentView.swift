@@ -3,6 +3,11 @@ import SwiftUI
 let timerClockHz = 1000.0
 let timerInterval = 1.0 / timerClockHz
 
+// FIXME: GLOBAL VARIABLESSSSS AAAAAAAA -- This makes the sounds more consistent
+var skippedTicksCount = 0
+var currentNote: Note?
+var currentNoteEndTime: Date?
+
 struct ContentView: View {
     
     let songsList: [Song]
@@ -10,11 +15,8 @@ struct ContentView: View {
     private let timer = Timer.publish(every: timerInterval, tolerance: timerInterval, on: .main, in: .common).autoconnect()
     
     @State private var timerEnabled = false
-    @State private var skippedTicksCount = 0
     
     @State private var currentNoteIndex: Int = 0;
-    @State private var currentNote: Note?
-    @State private var currentNoteEndTime: Date?
     
     @State private var tempo = 144.0
     @State private var currentSongIndex: Int = 0
@@ -54,7 +56,7 @@ struct ContentView: View {
         .frame(minWidth: 480, maxWidth: 600, minHeight: 300, maxHeight: 400)
         .onReceive(timer) {
             time in
-            self.playTick()
+            self.playTick(time: time)
         }
     }
     
@@ -79,17 +81,17 @@ struct ContentView: View {
     func stop() {
         self.timerEnabled = false
         self.currentNoteIndex = 0
-        self.currentNote = nil
-        self.currentNoteEndTime = nil
-        self.skippedTicksCount = 0
+        currentNote = nil
+        currentNoteEndTime = nil
+        skippedTicksCount = 0
     }
     
-    func playTick() {
+    func playTick(time: Date) {
         guard timerEnabled else { return }
-        guard let currentNote = self.currentNote else { return }
-        guard let currentNoteEndTime = self.currentNoteEndTime else { return }
+        guard let currentNote = currentNote else { return }
+        guard let currentNoteEndTime = currentNoteEndTime else { return }
         
-        if (Date() > currentNoteEndTime) {
+        if (time > currentNoteEndTime) {
             self.enqueueNextNote()
         }
         
@@ -119,10 +121,9 @@ struct ContentView: View {
         
         let noteDuration = baseDuration * note.value
         
-        self.skippedTicksCount = 0
-        self.currentNote = note;
-        let currentNoteEndTime = Date().addingTimeInterval(noteDuration / 1000.0)
-        self.currentNoteEndTime = currentNoteEndTime
+        skippedTicksCount = 0
+        currentNote = note;
+        currentNoteEndTime = Date().addingTimeInterval(noteDuration / 1000.0)
     }
     
     func loadNote(index: Int) -> Note? {
@@ -146,13 +147,13 @@ struct ContentView: View {
         let clockTicksPerToneTick = Int(timerClockHz / frequency)
         let clockTicksToSkip = clockTicksPerToneTick - 1
         
-        if (self.skippedTicksCount < clockTicksToSkip) {
-            self.skippedTicksCount += 1
+        if (skippedTicksCount < clockTicksToSkip) {
+            skippedTicksCount += 1
             return
         }
         
         self.performHapticFeedback()
-        self.skippedTicksCount = 0
+        skippedTicksCount = 0
     }
     
     func performHapticFeedback() {
