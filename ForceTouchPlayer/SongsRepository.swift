@@ -6,6 +6,7 @@ struct SongsRepository {
         tetrisThemeA,
         happyBirthday,
         imperialMarch,
+        hedwigsTheme
     ]
     
     func listSongs() -> [Song] {

@@ -43,6 +43,7 @@ _Needs macOS 10.15 (Catalina) or later_
 - Tetris Theme A™
 - Happy Birthday to You™
 - The Imperial March™
+- Hedwig's Theme™
 
 (that's it)
 
