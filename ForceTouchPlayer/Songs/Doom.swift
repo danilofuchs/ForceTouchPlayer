@@ -11,6 +11,7 @@ import Foundation
 let doomE1M1 = Song(
     name: "Doom E1M1",
     defaultTempo: 300.0,
+    padding: Note(frequency: 0, value: 0.15),
     rawNotes: [part1, part2, part3].flatMap { $0 }
 )
     // Had to break this into pieces, the compiler™ went brrr™
@@ -131,4 +132,3 @@ private let part3: [RawNote] = [
   (NOTE_E1, 0.5), (NOTE_E1, 0.5), (NOTE_E2, 0.5), (NOTE_E1, 0.5), (NOTE_E1, 0.5), (NOTE_D2, 0.5), (NOTE_E1, 0.5), (NOTE_E1, 0.5),
   (NOTE_B2, 0.375), (NOTE_G2, 0.375), (NOTE_E2, 0.375), (NOTE_B1, 0.375), (NOTE_E2, 0.375), (NOTE_G2, 0.375), (NOTE_C3, 0.375), (NOTE_B2, 0.375), (NOTE_G2, 0.375), (NOTE_B2, 0.375), (NOTE_G2, 0.375), (NOTE_E2, 0.375),
 ]
-
