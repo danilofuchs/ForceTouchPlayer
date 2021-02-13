@@ -44,6 +44,8 @@ _Needs macOS 10.15 (Catalina) or later_
 - Happy Birthday to You™
 - The Imperial March™
 - Hedwig's Theme™
+- Cantina Band™
+- DooM™ E1M1
 
 (that's it)
 
