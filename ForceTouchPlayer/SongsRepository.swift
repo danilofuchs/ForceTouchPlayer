@@ -8,6 +8,8 @@ struct SongsRepository {
         imperialMarch,
         hedwigsTheme,
         cMajorScale,
+        cantinaBand,
+        doomE1M1
     ]
     
     func listSongs() -> [Song] {
