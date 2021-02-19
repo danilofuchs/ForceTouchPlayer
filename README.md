@@ -111,9 +111,11 @@ This can't be right. Really?
 
 You will need Xcode™ 11+ running on macOS™ 10.15 (Catalina) or later. This project uses SwiftUI with features introduced in 10.15.
 
-Open the project on Xcode and run using either Debug or Release profile.
+Open the project on Xcode and run it using Debug scheme.
 
 There may be some issues related to certificates. Make sure you have your development certificate configured correctly on Xcode.
+
+To create a release build, run **Product** > **Archive**.
 
 ### Is there even a limit?
 
