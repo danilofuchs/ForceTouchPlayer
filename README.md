@@ -4,7 +4,7 @@ Do you own a MacBook™?
 
 Do you think the builtin Stereo Speakers™ are too limiting?
 
-Have you realized your Force Touch™ Trackpad is not actually a huge glass button?
+Have you realized your Force Touch™ Trackpad is not a huge glass button, but a huge glass **vibration motor**?
 
 You see where I'm getting at. Introducing the Force Touch Player™ (not actually a trademark)
 
@@ -12,7 +12,7 @@ Play your favorite 8-bit tunes _in_ the trackpad, _with_ the trackpad, _on_ the 
 
 ![Screenshot](./docs/screenshot.png)
 
-## Wow, such vibration
+## Wow, very music
 
 - Download [ForceTouchPlayer.zip from latest release](https://github.com/danilofuchs/ForceTouchPlayer/releases)
 - Unzip the file

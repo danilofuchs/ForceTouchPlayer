@@ -26,21 +26,22 @@ struct ContentView: View {
     }
     
     var body: some View {
-        let tempoStr = String(format: "%.1f", self.tempo).padding(toLength: 5, withPad: " ", startingAt: 0);
 
+        let tempoStr = String(format: "%.1f", self.tempo).padding(toLength: 5, withPad: " ", startingAt: 0);
+    
         return HStack {
             Spacer()
                 .frame(width: 64.0)
             VStack {
                 Spacer()
-                Picker(selection: $currentSongIndex.onChange(handlePickerChange), label: Text("Song:").frame(width: 130, alignment: .leading)) {
+                Picker(selection: $currentSongIndex.onChange(handlePickerChange), label: Text("Song:").frame(width: 150, alignment: .leading)) {
                     ForEach(0 ..< songsList.count, id: \.self) {
                         Text(self.songsList[$0].name).tag($0)
                     }
                 }
                 HStack {
-                    Text("Tempo: \(tempoStr) BPM").frame(width: 130, alignment: .leading)
-                    Slider(value: $tempo, in: 40...200, step: 4)
+                    Text("Tempo: \(tempoStr) BPM").frame(width: 150, alignment: .leading)
+                    Slider(value: $tempo, in: 40...300, step: 8)
                 }
                 Spacer()
                 Text("Don't take your finger off of the trackpad!")
