@@ -33,7 +33,7 @@ private let main: [RawNote] = [
     (NOTE_A1, 0.5),
     (NOTE_B1, 0.5),
     (NOTE_C2, 0.5),
-    
+
     (NOTE_D2, 1.5),
     (NOTE_F2, 0.5),
     (NOTE_A2, 1),
@@ -64,7 +64,7 @@ private let end: [RawNote] = [
 
     (NOTE_D2, 2),
     (NOTE_B1, 2),
-    
+
     (NOTE_C2, 2),
     (NOTE_A1, 2),
 

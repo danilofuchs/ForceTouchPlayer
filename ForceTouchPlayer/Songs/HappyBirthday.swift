@@ -33,7 +33,7 @@ let happyBirthday = Song(
         (NOTE_E1, 1),
         (NOTE_C2, 0.75),
         (NOTE_C2, 0.25),
-        
+
         (NOTE_B1, 1),
         (NOTE_G1, 1),
         (NOTE_A1, 1),

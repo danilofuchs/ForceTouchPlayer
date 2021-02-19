@@ -60,4 +60,5 @@ let imperialMarch = Song(
         (NOTE_C1, 0.75),
         (NOTE_G1, 0.25),
         (NOTE_E1, 2),
-    ])
+    ]
+)

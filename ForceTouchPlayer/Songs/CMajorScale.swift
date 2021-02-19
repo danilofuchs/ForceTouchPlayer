@@ -23,9 +23,9 @@ let cMajorScale = Song(
         (NOTE_D2, 1),
         (NOTE_E2, 1),
         (NOTE_F2, 1),
-        
+
         (NOTE_G2, 1),
-        
+
         (NOTE_F2, 1),
         (NOTE_E2, 1),
         (NOTE_D2, 1),

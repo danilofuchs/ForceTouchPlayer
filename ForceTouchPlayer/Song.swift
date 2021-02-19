@@ -2,29 +2,29 @@ import Foundation
 
 struct Song {
     let name: String
-    
+
     /// Tempo when user first selects the song
     var defaultTempo: Double = 144.0
-    
+
     /// Padding note added between each note in a song
     var padding: Note? = Note(frequency: 0, value: 0.25)
-    
+
     /// Raw notes in array-of-tuples form
     let rawNotes: [RawNote]
-    
+
     var notes: [Note] {
-        
         let parsedNotes = rawNotes.map {
             Note(frequency: $0.frequency, value: $0.value)
         }
-        
-        let paddedNotes = parsedNotes.enumerated().flatMap({(index, note) -> [Note] in
-            if (padding == nil || index == parsedNotes.count - 1) { // Do not pad end of song
+
+        let paddedNotes = parsedNotes.enumerated().flatMap { (index, note) -> [Note] in
+            if padding == nil || index == parsedNotes.count - 1 {
+                // Do not pad end of song
                 return [note]
             }
             return [note, padding!]
-        })
-        
+        }
+
         return paddedNotes
     }
 }
@@ -38,6 +38,7 @@ struct Note {
 /// a 1 means a quarter note, 0.5 an eighteenth , 0.25 sixteenth, so on
 typealias RawNote = (frequency: Double, value: Double)
 
+// swiftformat:disable all -- Keep spacing
 let NOTE_B0  = 31.0
 let NOTE_C1  = 33.0
 let NOTE_CS1 = 35.0
@@ -100,3 +101,4 @@ let NOTE_A5  = 880.0
 let NOTE_AS5 = 932.0
 let NOTE_B5  = 988.0
 let REST = 0.0
+// swiftformat:enable all

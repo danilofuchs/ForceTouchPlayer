@@ -24,7 +24,7 @@ let hedwigsTheme = Song(
         (NOTE_E2, 1),
 
         (NOTE_D2, 3),
-        
+
         (NOTE_B1, 3),
 
         (NOTE_A1, 1.5),
@@ -35,10 +35,10 @@ let hedwigsTheme = Song(
         (NOTE_AS1, 1),
 
         (NOTE_E1, 3),
-        
+
         (REST, 2),
         (NOTE_E1, 1),
-        
+
         (NOTE_A1, 1.5),
         (NOTE_C2, 0.5),
         (NOTE_B1, 1),
@@ -48,17 +48,17 @@ let hedwigsTheme = Song(
 
         (NOTE_G2, 2),
         (NOTE_FS2, 1),
-        
+
         (NOTE_F2, 2),
         (NOTE_CS2, 1),
-        
+
         (NOTE_F2, 1.5),
         (NOTE_E2, 0.5),
         (NOTE_DS2, 1),
-        
+
         (NOTE_DS1, 2),
         (NOTE_C2, 1),
-        
+
         (NOTE_A1, 3),
 
         (REST, 2),
@@ -66,23 +66,23 @@ let hedwigsTheme = Song(
 
         (NOTE_E2, 2),
         (NOTE_C2, 1),
-        
+
         (NOTE_E2, 2),
         (NOTE_C2, 1),
-        
+
         (NOTE_F2, 2),
         (NOTE_E2, 1),
-        
+
         (NOTE_DS2, 2),
         (NOTE_B1, 1),
-        
+
         (NOTE_C2, 1.5),
         (NOTE_E2, 0.5),
         (NOTE_DS2, 1),
-        
+
         (NOTE_DS1, 2),
         (NOTE_E1, 1),
-        
+
         (NOTE_E2, 3),
 
         (REST, 2),
@@ -90,22 +90,23 @@ let hedwigsTheme = Song(
 
         (NOTE_E2, 2),
         (NOTE_C2, 1),
-        
+
         (NOTE_E2, 2),
         (NOTE_C2, 1),
-        
+
         (NOTE_G2, 2),
         (NOTE_FS2, 1),
-        
+
         (NOTE_F2, 2),
         (NOTE_CS1, 1),
 
         (NOTE_F2, 1.5),
         (NOTE_E2, 0.5),
         (NOTE_DS2, 1),
-        
+
         (NOTE_DS1, 2),
         (NOTE_C2, 1),
-        
+
         (NOTE_A1, 3),
-    ])
+    ]
+)

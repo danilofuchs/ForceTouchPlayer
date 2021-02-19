@@ -68,6 +68,6 @@ let cantinaBand = Song(
         (NOTE_AS1, 0.5),
         (NOTE_AS1, 0.5),
         (NOTE_B1, 1),
-        (NOTE_G1, 1)
+        (NOTE_G1, 1),
     ]
 )
