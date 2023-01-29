@@ -21,6 +21,7 @@
 		31ED4854252FFA15002B9BAD /* Tetris.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31ED4853252FFA15002B9BAD /* Tetris.swift */; };
 		7D830402253FB48E002466B0 /* HedwigsTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D830401253FB48E002466B0 /* HedwigsTheme.swift */; };
 		7DDC3568253DC8D000F48DCD /* ImperialMarch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DDC3567253DC8D000F48DCD /* ImperialMarch.swift */; };
+		9729DA332985EC9A004C9AB3 /* Greensleeves.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9729DA322985EC9A004C9AB3 /* Greensleeves.swift */; };
 		BA357D2725D6B85900300A5E /* CantinaBand.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA357D2525D6B85900300A5E /* CantinaBand.swift */; };
 		BA357D2825D6B85900300A5E /* Doom.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA357D2625D6B85900300A5E /* Doom.swift */; };
 /* End PBXBuildFile section */
@@ -43,6 +44,7 @@
 		31ED4853252FFA15002B9BAD /* Tetris.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tetris.swift; sourceTree = "<group>"; };
 		7D830401253FB48E002466B0 /* HedwigsTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HedwigsTheme.swift; sourceTree = "<group>"; };
 		7DDC3567253DC8D000F48DCD /* ImperialMarch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImperialMarch.swift; sourceTree = "<group>"; };
+		9729DA322985EC9A004C9AB3 /* Greensleeves.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Greensleeves.swift; sourceTree = "<group>"; };
 		BA357D2525D6B85900300A5E /* CantinaBand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CantinaBand.swift; sourceTree = "<group>"; };
 		BA357D2625D6B85900300A5E /* Doom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Doom.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -110,6 +112,7 @@
 				31A156D22530030800777E42 /* HappyBirthday.swift */,
 				7DDC3567253DC8D000F48DCD /* ImperialMarch.swift */,
 				7D830401253FB48E002466B0 /* HedwigsTheme.swift */,
+				9729DA322985EC9A004C9AB3 /* Greensleeves.swift */,
 				317A217B2541277B00A96DF2 /* CMajorScale.swift */,
 			);
 			path = Songs;
@@ -189,6 +192,7 @@
 				31ED484D252FE058002B9BAD /* Song.swift in Sources */,
 				BA357D2825D6B85900300A5E /* Doom.swift in Sources */,
 				311A7A9C252D08620072A16B /* ContentView.swift in Sources */,
+				9729DA332985EC9A004C9AB3 /* Greensleeves.swift in Sources */,
 				7D830402253FB48E002466B0 /* HedwigsTheme.swift in Sources */,
 				31ED4854252FFA15002B9BAD /* Tetris.swift in Sources */,
 				7DDC3568253DC8D000F48DCD /* ImperialMarch.swift in Sources */,
