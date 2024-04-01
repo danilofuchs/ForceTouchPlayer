@@ -1,9 +1,12 @@
 # Force Touch Player
 
 
+https://github.com/danilofuchs/ForceTouchPlayer/assets/17657014/580bffd3-9dd9-4a46-88c4-fe3767380bc7
+
 https://user-images.githubusercontent.com/17657014/225430279-9b77017b-92ab-4ccc-9daf-7f62892f4e92.mp4
 
 Video credits to [@fsmiamoto](https://github.com/fsmiamoto)
+
 
 
 Do you own a MacBook™?
