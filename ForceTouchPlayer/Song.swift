@@ -35,7 +35,7 @@ struct Note {
 }
 
 /// Notes of the moledy followed by the duration in beats.
-/// a 1 means a quarter note, 0.5 an eighteenth , 0.25 sixteenth, so on
+/// a 1 means a quarter note, 0.5 an eighth , 0.25 sixteenth, so on
 typealias RawNote = (frequency: Double, value: Double)
 
 // swiftformat:disable all -- Keep spacing
