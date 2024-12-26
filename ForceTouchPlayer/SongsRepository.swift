@@ -10,6 +10,7 @@ struct SongsRepository {
         cMajorScale,
         cantinaBand,
         doomE1M1,
+        greensleeves,
     ]
 
     func listSongs() -> [Song] {
