@@ -13,13 +13,13 @@ let happyBirthday = Song(
         (NOTE_D1, 1),
         (NOTE_G1, 1),
 
-        (NOTE_F1, 2),
+        (NOTE_FS1, 2),
         (NOTE_D1, 0.75),
         (NOTE_D1, 0.25),
 
         (NOTE_E1, 1),
         (NOTE_D1, 1),
-        (NOTE_C2, 1),
+        (NOTE_A1, 1),
 
         (NOTE_G1, 2),
         (NOTE_D1, 0.75),
@@ -29,7 +29,7 @@ let happyBirthday = Song(
         (NOTE_B1, 1),
         (NOTE_G1, 1),
 
-        (NOTE_F1, 1),
+        (NOTE_FS1, 1),
         (NOTE_E1, 1),
         (NOTE_C2, 0.75),
         (NOTE_C2, 0.25),
